@@ -9,11 +9,6 @@ public class RAM extends Overclocked {
         this.memory = memory;
     }
 
-    @Override
-    public void overclockFrequency(double over) {
-
-    }
-
     public void isNotSoHot(double frequency) throws OverheatingRiskException {
         double increaseTemp = (frequency / 100) * INCREASE_TEMP;
         if (super.getTemperature() + increaseTemp > super.getMAX_SAFE_TEMPERATURE()) {

@@ -5,7 +5,8 @@ public abstract class Overclocked extends Part {
     private final double MAX_SAFE_TEMPERATURE;
 
 
-    public Overclocked(String producer, String name, String serialNumber, int frequency, double normalTemperature, double maxSafeTemperature) {
+    public Overclocked(String producer, String name, String serialNumber, int frequency, double normalTemperature,
+                       double maxSafeTemperature) {
         super(producer, name, serialNumber);
         this.frequency = frequency;
         this.NORMAL_TEMPERATURE = normalTemperature;
@@ -38,7 +39,7 @@ public abstract class Overclocked extends Part {
         return MAX_SAFE_TEMPERATURE;
     }
 
-    public abstract void isNotSoHot(double freq);
+    public abstract void isNotSoHot(double freq) throws OverheatingRiskException;
 
 
 }
