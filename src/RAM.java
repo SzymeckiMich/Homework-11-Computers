@@ -11,17 +11,10 @@ public class RAM extends Overclocked {
 
     @Override
     public void overclockFrequency(double over) {
-        try {
-            isNotSoHot(over);
-            System.out.println("Aktualna temperatura po podkręcaniu: " + super.getTemperature() + "*C");
 
-
-        } catch (OverheatingRiskException ex) {
-            System.err.println("Ryzyko przegrzania komponentu. Temperatura komponentu: " + super.getTemperature() +"*C");
-        }
     }
 
-    private void isNotSoHot(double frequency) throws OverheatingRiskException {
+    public void isNotSoHot(double frequency) throws OverheatingRiskException {
         double increaseTemp = (frequency / 100) * INCREASE_TEMP;
         if (super.getTemperature() + increaseTemp > super.getMAX_SAFE_TEMPERATURE()) {
             throw new OverheatingRiskException();

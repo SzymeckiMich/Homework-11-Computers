@@ -8,9 +8,6 @@ public class Test {
 
         Drive drive = new Drive("Samsung", "QVO", "123QWER", 512);
 
-        Computer computer = new Computer(drive, cpu, ram);
-        computer.showInfo();
-
 
 
     }

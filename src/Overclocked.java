@@ -38,7 +38,7 @@ public abstract class Overclocked extends Part {
         return MAX_SAFE_TEMPERATURE;
     }
 
-    public abstract void overclockFrequency(double over);
+    public abstract void isNotSoHot(double freq);
 
 
 }
